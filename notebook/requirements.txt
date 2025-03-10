@@ -1,0 +1,14 @@
+nx-arangodb
+nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com
+langchain 
+langchain-community 
+langchain-openai 
+langgraph
+pandas
+matplotlib
+scipy
+fuzzywuzzy 
+python-Levenshtein
+spacy
+rank_bm25
+networkx # install network-3.4.2 for graph visualization

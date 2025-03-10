@@ -1,0 +1,25 @@
+services:
+    arangodb:
+        image: arangodb:latest
+        container_name: arangodb
+        environment:
+            - ARANGO_ROOT_PASSWORD=123
+        ports:
+            - "8529:8529"
+        volumes:
+            - arangodb_data:/var/lib/arangodb3
+            - arangodb_apps:/var/lib/arangodb3-apps
+
+    n8n:
+        image: docker.n8n.io/n8nio/n8n
+        container_name: n8n
+        ports:
+            - "5678:5678"
+        volumes:
+            - n8n_data:/home/node/.n8n
+
+
+volumes:
+    arangodb_data:
+    arangodb_apps:
+    n8n_data:
